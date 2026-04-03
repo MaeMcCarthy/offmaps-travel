@@ -1,0 +1,648 @@
+body {
+  margin: 0;
+  font-family: "Times New Roman", serif;
+  background-color: #f7f3ea;
+  color: #6f5b4d;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 250, 240, 0.92);
+  padding: 18px 40px;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #4e70aa;
+  font-style: italic;
+  font-weight: bold;
+  font-family:cursive;
+}
+
+.main-nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #3f342d;
+  font-size: 1.15rem;
+}
+
+.main-nav a:hover {
+  color: #7bbdc7;
+}
+
+
+
+
+.hero {
+  background-image: url("images/hero.jpg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  background: rgba(247, 250, 245, 0.82);
+  padding: 30px;
+  border-radius: 18px;
+  width: 70%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.search-box h2 {
+  margin-top: 0;
+  color: #1f56b3;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.form-row select,
+.form-row input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #bcae9e;
+  font-size: 1rem;
+  min-width: 180px;
+  background-color: #fffaf2;
+}
+
+.search-box button {
+  background-color: #b9dde0;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #93c9cf;
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.intro-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.intro-left h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+  color: #7a6858;
+}
+
+.country-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.country-card {
+  text-align: center;
+}
+
+.country-card h3 {
+  margin-bottom: 10px;
+  color: #3f6bb5;
+  font-size: 1.1rem;
+}
+
+.country-card img {
+  width: 100%;
+  max-width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.review-box {
+  background: #fcf8ef;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.review-box h2 {
+  color: #1f56b3;
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.review-box button {
+  background-color: #b9dde0;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#reviewText {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+  }
+
+  .country-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-left h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 88%;
+    padding: 20px;
+  }
+
+  .country-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-left h1 {
+    font-size: 1.9rem;
+  }
+}.logo {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.logo img {
+  height: 70px;
+  width:auto;
+}
+
+.logo span {
+  font-size: 3rem;
+  color: #1f56b3;
+  font-style: italic;
+  font-weight: bold;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.destinations-page {
+  background-image: url("images/hero.jpg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.destinations-overlay {
+  background: rgba(255, 255, 255, 0.72);
+  min-height: 100vh;
+  padding: 30px 40px 50px;
+}
+
+.destinations-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.destinations-top h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  color: #7a6858;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #8f8f8f;
+  padding-bottom: 10px;
+}
+
+.quiz-box {
+  background: rgba(252, 248, 239, 0.9);
+  border-radius: 18px;
+  padding: 20px 25px;
+  text-align: center;
+  min-width: 250px;
+}
+
+.quiz-box p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #6f5b4d;
+}
+
+.quiz-button {
+  display: inline-block;
+  background-color: #9fd4de;
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.continent-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  margin: 20px 0 35px;
+  font-size: 1.2rem;
+}
+
+.continent-button {
+  background: none;
+  border: none;
+  font-family: "Times New Roman", serif;
+  font-size: 1.2rem;
+  color: #2f2f2f;
+  cursor: pointer;
+}
+
+.continent-button.active {
+  background-color: #9fd4de;
+  color: white;
+  padding: 8px 28px;
+  border-radius: 20px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.destination-card {
+  text-align: center;
+  position: relative;
+}
+
+.destination-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.destination-card button {
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  transform: translateX(-50%);
+  background-color: #9fd4de;
+  border: none;
+  color: white;
+  padding: 12px 34px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.destination-card h3 {
+  margin-top: 14px;
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 1200px) {
+  .destination-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .destinations-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .continent-nav {
+    gap: 15px;
+  }
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.greece-hero {
+  background-image: url("images/hero.jpg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px;
+}
+
+.greece-weather-box {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 20px;
+  padding: 24px;
+  width: 320px;
+}
+
+.greece-weather-box h2 {
+  margin-top: 0;
+  color: #6f5b4d;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.weather-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #7a7a7a;
+}
+
+.greece-page-section {
+  background: rgba(255, 255, 255, 0.45);
+  padding: 30px 20px 50px;
+}
+
+.greece-title-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid #7a7a7a;
+  margin-bottom: 30px;
+}
+
+.greece-title-row h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  color: #7a6858;
+  margin: 0;
+}
+
+.stars {
+  color: #f5b400;
+  font-size: 2rem;
+}
+
+.greece-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+}
+
+.greece-stays-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stay-card {
+  text-align: center;
+}
+
+.stay-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.stay-card button {
+  margin-top: -58px;
+  position: relative;
+  z-index: 2;
+  background-color: #9fd4de;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 18px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.trip-box {
+  background: rgba(252, 248, 239, 0.92);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.trip-box h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #6f5b4d;
+  margin-top: 0;
+}
+
+.trip-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.trip-box select,
+.trip-box button {
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+.trip-box select {
+  border: 1px solid #bcae9e;
+  background: #fffaf2;
+}
+
+.trip-box button {
+  background-color: #b9dde0;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#tripMessage {
+  margin-top: 14px;
+}
+
+@media (max-width: 1000px) {
+  .greece-content {
+    grid-template-columns: 1fr;
+  }
+
+  .greece-stays-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .greece-stays-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .greece-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .greece-hero {
+    justify-content: center;
+    padding: 20px;
+  }
+}
+.quiz-hero {
+  background-image: url("images/hero.jpg.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  background: rgba(255, 250, 240, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 900px;
+}
+
+.quiz-header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.quiz-header p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quiz-question {
+  margin-bottom: 25px;
+}
+
+.quiz-images,
+.quiz-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.quiz-option {
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: 1px solid #bcae9e;
+  background: #fffaf2;
+  cursor: pointer;
+}
+
+.quiz-option.selected {
+  background-color: #9fd4de;
+  color: white;
+}
+
+#quizSubmit {
+  display: block;
+  margin: 30px auto 10px;
+  padding: 14px 40px;
+  background-color: #9fd4de;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#quizResult {
+  text-align: center;
+  margin-top: 10px;
+}
+.video-box {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fcf8ef;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.video-box iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 150px;
+  border-radius: 15px;
+  border: 2px solid #9fd4de;
+}
