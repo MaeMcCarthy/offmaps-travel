@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OffMaps | Stays in Greece</title>
+  <meta name="description" content="Explore villas, flats, rooms and hotels in Greece with live Athens weather.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/offmapslogo.jpg" alt="OffMaps Logo">
+        <span>OffMaps</span>
+      </a>
+    </div>
+
+    <nav class="main-nav">
+      <a href="destinations.html">Destinations</a>
+      <a href="#">Premium Stays</a>
+      <a href="#">Budget Stays</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="video-section">
+  <div class="video-box">
+    <h2>Discover Greece</h2>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/AKGkbdILcjU?si=XsSmKkEmdlSlWuHI" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+ </section>
+    
+
+  <section class="greece-hero">
+    <div class="greece-weather-box">
+      <h2>Athens Weather</h2>
+      <p id="weatherStatus">Click the button for a live update!</p>
+      <button onclick="getAthensWeather()">Show Weather</button>
+      
+      <div class="weather-grid">
+        <div>
+          <span class="weather-label">Temperature</span>
+          <p id="temp">--</p>
+        </div>
+        <div>
+          <span class="weather-label">Wind</span>
+          <p id="wind">--</p>
+        </div>
+        <div>
+          <span class="weather-label">Time</span>
+          <p id="time">--</p>
+        </div>
+        <div>
+          <span class="weather-label">Code</span>
+          <p id="code">--</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="greece-page-section">
+    <div class="greece-title-row">
+      <h1>Stays in Greece</h1>
+      <div class="stars">★ ★ ★ ★ ★</div>
+    </div>
+
+    <div class="greece-content">
+      <div class="greece-stays-grid">
+        <div class="stay-card">
+          <img src="images/greecevillas.jpg" alt="Villa stay in Greece">
+          <button>Villas</button>
+        </div>
+        <div class="stay-card">
+          <img src="images/greeceflats.jpg" alt="Flat style stay with sea view">
+          <button>Flats</button>
+        </div>
+        <div class="stay-card">
+          <img src="images/spain.jpg" alt="Room stay in Greece">
+          <button>Rooms</button>
+        </div>
+        <div class="stay-card">
+          <img src="images/greecehotels.jpg" alt="Hotel stay in Greece">
+          <button>Hotels</button>
+        </div>
+      </div>
+
+      <aside class="trip-box">
+        <h3>What's on in Greece?</h3>
+        <form id="greeceTripForm" action="/action_page.php" onsubmit="return handleGreeceForm()">
+          <label for="travelMonth">Month:</label>
+          <select id="travelMonth" name="travelMonth" required>
+            <option value="">Travel Dates</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+          </select>
+
+          <label for="city">City:</label>
+          <select id="city" name="city" required>
+            <option value="">Destination</option>
+            <option>Athens</option>
+            <option>Santorini</option>
+          </select>
+
+          <button type="submit">Discover Now</button>
+        </form>
+        <p id="tripMessage"></p>
+      </aside>
+    </div>
+  </section>
+
+  <script>
+    function getAthensWeather() {
+      document.getElementById("weatherStatus").innerHTML = "Fetching data...";
+      
+      document.getElementById("temp").innerHTML = "22°C";
+      document.getElementById("wind").innerHTML = "12 km/h";
+      document.getElementById("time").innerHTML = "14:30";
+      document.getElementById("code").innerHTML = "Code: 0";
+      document.getElementById("weatherStatus").innerHTML = "Live weather in Athens right now";
+    }
+
+    function handleGreeceForm() {
+      document.getElementById("tripMessage").innerHTML = "Your Greece trip ideas are ready to explore.";
+      return false;
+    }
+  </script>
+
+</body>
+</html>
+
+  
